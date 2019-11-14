@@ -4,7 +4,6 @@ from flask import Flask, flash, redirect, render_template, \
      request, url_for
 
 app = Flask(__name__)
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 config = {
 "apiKey": "AIzaSyB9SoquwFANP1i0sGh8enX63-s1TdpdX9I",
@@ -40,7 +39,7 @@ def login():
         password = request.form['password']
 
         try:
-             user = auth.sign_in_with_email_and_password(email, password)
+             auth.sign_in_with_email_and_password(email, password)
              return render_template('landing.html', username=email)
         except:
              return render_template('login.html', us=unsuccessful)
@@ -58,12 +57,13 @@ def signup():
         password = request.form['password']
 
         try:
-             user = auth.create_user_with_email_and_password(email, password)
+             auth.create_user_with_email_and_password(email, password)
              return render_template('landing.html', username=email)
         except:
              return render_template('signup.html', us=unsuccessful)
 
     return render_template('signup.html', error=error)
+
 
 
 if __name__ == '__main__':
