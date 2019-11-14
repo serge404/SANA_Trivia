@@ -1,1 +1,1 @@
-# Trivia
+# SANA Trivia
