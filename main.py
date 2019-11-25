@@ -25,6 +25,10 @@ auth = firebase.auth()
 def index():
     return render_template('index.html')
 
+@app.route('/hello')
+def hello():
+    return 'Hello, World'
+
 @app.route('/landing/<username>')
 def landingPage():
     return render_template('landing.html', username=username)
