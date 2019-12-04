@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>SANA Trivia</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      firebaseConfig = {
+        apiKey: "AIzaSyB9SoquwFANP1i0sGh8enX63-s1TdpdX9I",
+        authDomain: "sana-trivia.firebaseapp.com",
+        databaseURL: "https://sana-trivia.firebaseio.com",
+        projectId: "sana-trivia",
+        storageBucket: "sana-trivia.appspot.com",
+        messagingSenderId: "152446053252",
+        appId: "1:152446053252:web:894d73e67ad77f11c50bd1",
+        measurementId: "G-X7GGQ1H4B6"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // auth and firestore references
+      auth = firebase.auth();
+      db = firebase.firestore();
+    </script>
+  </head>
+  
+  <body>
+    <div id="login_div" class="main-div">
+        <h3>LOG ON</h3>
+        <input type="email" placeholder="Email" id="inputEmail" />
+        <input type="password" placeholder="Enter your password" id="inputPassword" />
+        <button onclick="login()">Login to Account</button>
+      
+        <button onclick="googleSignIn()"> Login with Google </button>
+        <form action="home.html">
+            <button type="submit" value="Home Page"> Visit Home Page </button>
+        </form>
+    </div>
+    <script src="login.js"></script>
+  </body>
+    
+   
+</html>

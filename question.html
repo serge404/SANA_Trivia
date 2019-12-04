@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>SANA Trivia</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      firebaseConfig = {
+        apiKey: "AIzaSyB9SoquwFANP1i0sGh8enX63-s1TdpdX9I",
+        authDomain: "sana-trivia.firebaseapp.com",
+        databaseURL: "https://sana-trivia.firebaseio.com",
+        projectId: "sana-trivia",
+        storageBucket: "sana-trivia.appspot.com",
+        messagingSenderId: "152446053252",
+        appId: "1:152446053252:web:894d73e67ad77f11c50bd1",
+        measurementId: "G-X7GGQ1H4B6"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // auth and firestore references
+      auth = firebase.auth();
+      db = firebase.firestore();
+    </script>
+  </head>
+  <body>
+    <h1>Create a challenge</h1>
+        <div class="container-fluid">
+            <input type="question" id="question-id" required />
+            <label for="question-id">Enter the question for challenge</label>
+            
+            <input type="answer" id="answer-id" required />
+            <label for="answer-id">Enter correct answer for above question</label>
+            
+            <input type="text" id="firstchoice" required>
+            <label for="firstchoice">Answer Choice 1</label>
+            
+            <input type="text" id="secondchoice" required>
+            <label for="secondchoice">Answer Choice 2</label>
+            
+            <input type="text" id="thirdchoice" required>
+            <label for="thirdchoice">Answer Choice 3</label>
+            
+            <input type="text" id="fourthchoice" required>
+            <label for="fourthchoice">Answer Choice 4</label><br>
+            
+            <button onclick="addQuestion()">Submit question</button>
+        </div>
+    
+    <a href="home.html">Go back </a>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="question.js"></script>
+</body>
+</html>

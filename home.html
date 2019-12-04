@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>SANA Trivia</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      firebaseConfig = {
+        apiKey: "AIzaSyB9SoquwFANP1i0sGh8enX63-s1TdpdX9I",
+        authDomain: "sana-trivia.firebaseapp.com",
+        databaseURL: "https://sana-trivia.firebaseio.com",
+        projectId: "sana-trivia",
+        storageBucket: "sana-trivia.appspot.com",
+        messagingSenderId: "152446053252",
+        appId: "1:152446053252:web:894d73e67ad77f11c50bd1",
+        measurementId: "G-X7GGQ1H4B6"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // auth and firestore references
+      auth = firebase.auth();
+      db = firebase.firestore();
+    </script>
+  </head>
+  
+  <body>
+    <div class="container-fluid"
+    <h3>SANA Trivia </h1>
+    <h3> Pick a page </h3>
+    <button type="button" onclick="window.location.href='movies.html';"> Movie Trivia </button>
+    <button type="button" onclick="window.location.href='music.html';"> Music Trivia </button>
+    <button type="button" onclick="window.location.href='sports.html';"> Sports Trivia </button>
+      <div class = "leaderb">
+        <a href="leaderboard.html">Leaderboard</a>
+      </div>
+      <div class = "about">
+          <a href="about.html">About us</a>
+      </div>
+      <div class = "create">
+          <a href="question.html">Add a question</a>
+      </div>
+    
+    <button onclick="logOut()"> Logout </button>
+    <script src="home.js"></script>
+    </div>
+   </body>
+</html>
