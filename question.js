@@ -9,7 +9,7 @@ function addQuestion() {
     console.log(answer);
     var user = auth.currentUser;
     user.providerData.forEach(function (profile) {
-        db.collection("users").doc(profile.displayName).set(entireQuestion).then(function() {
+        db.collection("users").doc(profile.displayName).set({questions: question}).then(function() {
             console.log("Document successfully written!");
         });
       });

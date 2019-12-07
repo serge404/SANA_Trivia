@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="question.css">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
@@ -34,31 +35,32 @@
     </script>
   </head>
   <body>
-    <h1>Create a challenge</h1>
-        <div class="container-fluid">
-            <input type="question" id="question-id" required />
-            <label for="question-id">Enter the question for challenge</label>
-            
-            <input type="answer" id="answer-id" required />
-            <label for="answer-id">Enter correct answer for above question</label>
-            
-            <input type="text" id="firstchoice" required>
-            <label for="firstchoice">Answer Choice 1</label>
-            
-            <input type="text" id="secondchoice" required>
-            <label for="secondchoice">Answer Choice 2</label>
-            
-            <input type="text" id="thirdchoice" required>
-            <label for="thirdchoice">Answer Choice 3</label>
-            
-            <input type="text" id="fourthchoice" required>
-            <label for="fourthchoice">Answer Choice 4</label><br>
-            
-            <button onclick="addQuestion()">Submit question</button>
+        <div class="container">
+            <h1>Create a challenge</h1>
+            <input type="question" class="form-control" id="question-id" required />
+            <label for="question-id">Enter the question for challenge</label> <br>
+
+            <input type="answer" class="form-control" id="answer-id" required />
+            <label for="answer-id">Enter correct answer for above question</label> <br>
+
+            <input type="text" class="form-control" id="firstchoice" required>
+            <label for="firstchoice">Answer Choice 1</label> <br>
+
+            <input type="text" class="form-control" id="secondchoice" required>
+            <label for="secondchoice">Answer Choice 2</label> <br>
+
+            <input type="text" class="form-control" id="thirdchoice" required>
+            <label for="thirdchoice">Answer Choice 3</label> <br>
+
+            <input type="text" class="form-control" id="fourthchoice" required>
+            <label for="fourthchoice">Answer Choice 4</label> <br>
+
+            <button class="btn btn-success"onclick="window.location.href='home.html';">Submit question</button> <br> <br>
+
+            <button type="button" class="btn btn-danger" onclick="window.location.href='home.html';"> Go Back to Home </button> <br>
         </div>
-    
-    <a href="home.html">Go back </a>
-    
+
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="home.css">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
@@ -33,25 +34,22 @@
       db = firebase.firestore();
     </script>
   </head>
-  
+
   <body>
-    <div class="container-fluid"
-    <h3>SANA Trivia </h1>
-    <h3> Pick a page </h3>
-    <button type="button" onclick="window.location.href='movies.html';"> Movie Trivia </button>
-    <button type="button" onclick="window.location.href='music.html';"> Music Trivia </button>
-    <button type="button" onclick="window.location.href='sports.html';"> Sports Trivia </button>
-      <div class = "leaderb">
-        <a href="leaderboard.html">Leaderboard</a>
-      </div>
-      <div class = "about">
-          <a href="about.html">About us</a>
-      </div>
-      <div class = "create">
-          <a href="question.html">Add a question</a>
-      </div>
-    
-    <button onclick="logOut()"> Logout </button>
+    <div class="container-fluid">
+    <h1>SANA Trivia </h1>
+    <h3> Pick a category to play </h3>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='movies.html';"> Movie Trivia </button> <br>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='music.html';"> Music Trivia </button> <br>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='sports.html';"> Sports Trivia </button> <br>
+    <h3> View high scores </h3>
+    <button type="button" class="btn btn-light" onclick="window.location.href='leaderboard.html';"> High Scores </button> <br>
+    <h3> Add a question to a category </h3>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='question.html';"> Add Question </button> <br>
+    <h3> Learn about the creators </h3>
+    <button type="button" class="btn btn-info" onclick="window.location.href='about.html';"> About Us </button> <br>
+    <h3> Logout </h3>
+    <button class="btn btn-danger" onclick="logOut()"> Logout </button>
     <script src="home.js"></script>
     </div>
    </body>

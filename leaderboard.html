@@ -34,22 +34,26 @@
       db = firebase.firestore();
     </script>
   </head>
-
   <body>
-
-    <div class="container-fluid">
-        <h1> SANA TRIVIA <h1>
-        <h3>LOG ON</h3>
-        <input type="email" class="form-control" placeholder="Email" id="inputEmail" />
-        <input type="password" class="form-control" placeholder="Enter your password" id="inputPassword" />
-        <button class="btn btn-primary" onclick="login()">Login to Account</button> <br> <br>
-        <button class="btn btn-primary" onclick="googleSignIn()"> Login with Google </button> <br> <br>
-        <form action="home.html">
-            <button type="submit" class="btn btn-success" value="Home Page"> Visit Home Page </button>
-        </form>
-    </div>
-    <script src="login.js"></script>
-  </body>
-
-
-</html>
+    <div class="container">
+    <h1> High Scores  </h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Movie Score</th>
+      <th scope="col">Sports Score</th>
+      <th scope="col">Music Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Serge Selenou</th>
+      <td>5</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</body>

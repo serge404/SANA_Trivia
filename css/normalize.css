@@ -20,9 +20,14 @@ html {
  * Remove the margin in all browsers.
  */
 
-body {
-  margin: 0;
-}
+ body{
+     margin: 0;
+     padding: 0;
+     background-color: coral;
+     background-size: cover;
+     background-position: center;
+     font-family: sans-serif;
+ }
 
 /**
  * Render the `main` element consistently in IE.
